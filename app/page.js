@@ -84,8 +84,8 @@ export default async function Home() {
                           .explain.find(e => e.fixture === fixture.id)
                           .stats.find(s => s.identifier === 'minutes').value > 0
                         )
-                        .map(h => (
-                          <div className='flex text-xs'>
+                        .map((h, index) => (
+                          <div className={`flex ${index === 0 ? 'font-semibold text-sm' : 'text-xs'}`}>
                             <p className='mr-2'>
                               { h.web_name }
                             </p>
@@ -116,8 +116,8 @@ export default async function Home() {
                           .explain.find(e => e.fixture === fixture.id)
                           .stats.find(s => s.identifier === 'minutes').value > 0
                         )
-                        .map(a => (
-                          <div className='flex text-xs'>
+                        .map((a, index) => (
+                          <div className={`flex ${index === 0 ? 'font-semibold text-sm' : 'text-xs'}`}>
                             <p className='mr-2'>
                               { a.web_name }
                             </p>
