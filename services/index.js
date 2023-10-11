@@ -28,3 +28,5 @@ export const getBootstrap = async () => await getResult(`${api_url}/bootstrap-st
 export const getFixtures = async () => await getResult(`${api_url}/fixtures`);
 export const getElementSummary = async (id) => await getResult(`${api_url}/element-summary/${id}`);
 export const getLiveEvent = async (gw) => await getResult(`${api_url}/live-event/${gw}`)
+export const getPicksData = async (id, gw) => await getResult(`${api_url}/picks/${id}/${gw}`);
+export const getManagerInfo = async (id) => await getResult(`${api_url}/manager/${id}`);
