@@ -32,7 +32,7 @@ export default function HeaderMain() {
   return (
         
 
-    <nav className="bg-gradient-to-br from-purple-700 to-blue-500 fixed w-full z-20 top-0 left-0 border-b">
+    <nav className="bg-gradient-to-br from-purple-700 to-blue-500 fixed w-full z-20 top-0 left-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="/" className="flex items-center">
           {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo"> */}
