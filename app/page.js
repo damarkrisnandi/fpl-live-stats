@@ -73,7 +73,7 @@ export default async function Home() {
               [
                 {
                   tabState: `${getTeam(fixture.team_h)}`,
-                  title: `${getTeam(fixture.team_h)} \t ${fixture.team_h_score}`,
+                  title: `${getTeam(fixture.team_h)} \t ${fixture.team_h_score >= 0 ? fixture.team_h_score : ''}`,
                   component: (
                     <div>
                       {
@@ -105,7 +105,7 @@ export default async function Home() {
                 },
                 {
                   tabState: `${getTeam(fixture.team_a)}`,
-                  title: `${fixture.team_a_score} \t ${getTeam(fixture.team_a)}`,
+                  title: `${fixture.team_a_score >= 0 ? fixture.team_a_score : ''} \t ${getTeam(fixture.team_a)}`,
                   component: (
                     <div>
                       {
