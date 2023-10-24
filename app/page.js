@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 import GameWeek from '@/components/Gameweek';
 import TabView from '@/components/TabView';
 import { getBootstrap, getFixtures, getLiveEvent } from '@/services'
