@@ -4,7 +4,7 @@ const headers = {'Content-Type': 'application/json'};
 
 const getResult = (url) => {
     const result = new Promise((resolve, reject) => {
-         fetch(url, { next: { revalidate: 900 } })
+        fetch(`${url}${(url.includes('?') ? '&t=' : '?t=') + new Date().getTime()}`, { next: { revalidate: 900 } })
          .then(data => {
              data.json().then(json => {
                  resolve(json)
