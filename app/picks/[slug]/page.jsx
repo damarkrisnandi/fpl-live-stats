@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import GameWeek from '@/components/Gameweek';
 import TabView from '@/components/TabView';
 import { getBootstrap, getFixtures, getLiveEvent, getPicksData, getManagerInfo } from '@/services'
@@ -10,7 +10,7 @@ export default async function Home(props) {
     const id = props.params.slug;
   const bootstrap = await getBootstrap();
   bootstrap.elements.sort((a, b) => b.minutes - a.minutes)
-  const fixtures = await getFixtures();
+  const fixtures = Object.values(await getFixtures());
   // gw
   const gameweek = (bootstrap.events.find((data) => data.is_current)).id;
   const currentFixtures = fixtures.filter(f => f.event === gameweek);

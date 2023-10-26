@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import GameWeek from '@/components/Gameweek';
 import TabView from '@/components/TabView';
 import { getBootstrap, getFixtures, getLiveEvent } from '@/services'
@@ -7,7 +7,7 @@ import Image from 'next/image'
 export default async function Home() {
   const bootstrap = await getBootstrap();
   bootstrap.elements.sort((a, b) => b.minutes - a.minutes)
-  const fixtures = await getFixtures();
+  const fixtures = Object.values(await getFixtures());
   const gameweek = (bootstrap.events.find((data) => data.is_current)).id;
   const currentFixtures = fixtures.filter(f => f.event === gameweek);
   const finishedMatch = currentFixtures.filter((data) => data.finished && data.finished_provisional)
